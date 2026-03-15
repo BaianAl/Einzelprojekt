@@ -55,7 +55,7 @@ class GameResultServiceTests {
 
 
 
-    
+
     @Test
     fun test_addGameResult_multipleEntries_correctId() {
         val gameResult1 = GameResult(0, "player1", 17, 15.3)
@@ -104,4 +104,3 @@ class GameResultServiceTests {
     }
 }
 
-}
