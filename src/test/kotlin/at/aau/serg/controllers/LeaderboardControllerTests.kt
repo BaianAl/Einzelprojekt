@@ -46,7 +46,7 @@ class LeaderboardControllerTests {
         val slow = GameResult(2, "Hund", 10, 15.0)
         val res = controller.getLeaderboard(null)
 
-        whenever(mockedService.getGameResults()).thenReturn(listOf(medium, slowest, fastest))
+        whenever(mockedService.getGameResults()).thenReturn(listOf(Medium, slowest, fastest))
         assertEquals(fast, res[0])
         assertEquals(medium, res[1])
         assertEquals(slow, res[2])
