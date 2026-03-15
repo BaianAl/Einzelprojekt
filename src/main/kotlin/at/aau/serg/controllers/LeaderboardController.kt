@@ -32,6 +32,7 @@ class LeaderboardController(
         if (rank == null) {
             return leaderboardSorted
         }
+
         // Fehler prüfen --> ist rank gültig --> ok
         // Ist nicht --> HTTP 400 Bad Request
         if (rank < 1 || rank > leaderboardSorted.size) {
