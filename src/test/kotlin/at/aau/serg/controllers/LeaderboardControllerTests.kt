@@ -44,12 +44,15 @@ class LeaderboardControllerTests {
     @Test
     fun test_getLB_sameScoreANDfastestTime() {
         // id ist absichtlich nicht sortiert um es wirklich zu testen
-        val fast = GameResult(1, "Maus", 30, 30.0)
-        val medium = GameResult(3, "Katze", 25, 15.0)
-        val slow = GameResult(2, "Hund", 10, 15.0)
-        val res = controller.getLeaderboard(null)
+        val fast = GameResult(3, "Maus", 30, 30.0)
+        val medium = GameResult(2, "Katze", 30, 15.0)
+        val slow = GameResult(2, "Hund", 30, 15.0)
 
         whenever(mockedService.getGameResults()).thenReturn(listOf(medium, slow, fast))
+
+        val res: List<GameResult> = controller.getLeaderboard(null)
+
+        verify(mockedService).getGameResults()
         assertEquals(fast, res[0])
         assertEquals(medium, res[1])
         assertEquals(slow, res[2])
