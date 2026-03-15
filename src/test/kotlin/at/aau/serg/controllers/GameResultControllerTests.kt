@@ -9,6 +9,7 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when` as whenever
 import kotlin.test.Test
 
+
 class GameResultControllerTests {
 
     // Warum habe ich diese Klasse erstellt ?
