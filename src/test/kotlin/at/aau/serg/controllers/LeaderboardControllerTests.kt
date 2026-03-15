@@ -50,6 +50,10 @@ class LeaderboardControllerTests {
 
         whenever(mockedService.getGameResults()).thenReturn(listOf(medium, slow, fast))
 
+
+
+
+
         val res: List<GameResult> = controller.getLeaderboard(null)
 
         verify(mockedService).getGameResults()
