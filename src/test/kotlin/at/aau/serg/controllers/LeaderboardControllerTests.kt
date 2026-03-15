@@ -38,7 +38,7 @@ class LeaderboardControllerTests {
         assertEquals(first, res[0])
         assertEquals(second, res[1])
         assertEquals(third, res[2])
-        
+
     }
 
     @Test
