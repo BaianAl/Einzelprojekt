@@ -15,6 +15,8 @@ class LeaderboardController(
 ) {
 
 
+
+
     @GetMapping
     fun getLeaderboard(@RequestParam(required = false) rank: Int?): List<GameResult> {
 
