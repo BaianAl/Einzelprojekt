@@ -14,6 +14,7 @@ class LeaderboardController(
     private val gameResultService: GameResultService
 ) {
 
+
     @GetMapping
     fun getLeaderboard(@RequestParam(required = false) rank: Int?): List<GameResult> {
 
