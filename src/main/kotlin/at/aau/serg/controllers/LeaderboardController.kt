@@ -21,7 +21,7 @@ class LeaderboardController(
         // Wenn in der URL /leaderboard?rank=5 --> rank= 5
         // Int? --> also rank kann null sein
 
-        // Leaerboard sortieren
+        // Leaerboard sortier
         val leaderboardSorted = gameResultService.getGameResults() // --> holt alle Spielergebisse mit diese mit gameresultService.getGameResults
                 .sortedWith(compareBy({ -it.score }, { it.timeInSeconds }))  // --> hier wird -it.score nache Score absteigende und it.timeInsec. nach Zeit aufsteigend sortiert
 
