@@ -54,6 +54,10 @@ class GameResultControllerTests {
         val list = listOf(GameResult(1, "player", 10, 5.0))
         whenever(mockedService.getGameResults()).thenReturn(list)
 
+
+
+
+
         val res = controller.getAllGameResults()
 
         verify(mockedService).getGameResults()
